@@ -7,8 +7,8 @@ tasklist /FI "IMAGENAME eq mariadbd.exe" 2>NUL | find /I /N "mariadbd.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [OK] MariaDB is already running on port 3306!
 ) else (
-    start "" /B "C:\Users\suman\.mariadb\mariadb-10.11.8-winx64\bin\mariadbd.exe" --defaults-file="C:\Users\suman\.mariadb\data\my.ini"
-    timeout /t 2 /nobreak >nul
+    start "" "C:\Users\suman\.mariadb\mariadb-10.11.8-winx64\bin\mariadbd.exe" --defaults-file="C:\Users\suman\.mariadb\data\my.ini"
+    timeout /t 3 /nobreak >nul
     echo [SUCCESS] MariaDB server started successfully in the background.
 )
 

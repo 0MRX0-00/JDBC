@@ -1,5 +1,5 @@
 # Kongu Engineering College (Autonomous) - Regulation 2024 (R2024)
-## Stdent Academic & Continuous Evaluation System (Java JDBC)
+## Student Academic & Continuous Evaluation System (Java JDBC)
 
 A comprehensive, database-driven academic continuous assessment and grading engine developed in **Java** utilizing **JDBC** and **MySQL**. It strictly adheres to the official **Kongu Engineering College (Autonomous) - Regulation 2024 (R2024)** academic regulations.
 
@@ -77,15 +77,18 @@ $$\text{Equivalent Percentage} = \text{SGPA} \times 10$$
 - Java JDK 17+ installed.
 
 ### Option 1: Quick Batch Execution (Windows)
-Double-click or run from PowerShell/CMD:
-- `build.bat` - Compiles the application.
+Navigate into the `Program` folder and double-click or run:
+- `build.bat` - Compiles all Java source files.
 - `run.bat` - Launches the interactive terminal menu.
-- `demo.bat` - Runs the comprehensive verification demonstration.
+- `demo.bat` - Runs the comprehensive automated verification suite.
+- `start_db.bat` - Starts the background MariaDB service.
 
-### Option 2: Command Line
+### Option 2: Command Line (inside `Program/` folder)
 ```powershell
+cd Program
+
 # 1. Compile all Java source files
-javac -cp ".;lib\mysql-connector-j-8.3.0.jar" -d . src\*.java
+javac -cp ".;lib\mysql-connector-j-8.3.0.jar" *.java
 
 # 2. Run Interactive Menu Application
 java -cp ".;lib\mysql-connector-j-8.3.0.jar" MainApp
