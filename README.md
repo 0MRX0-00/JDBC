@@ -1,5 +1,5 @@
 # Kongu Engineering College (Autonomous) - Regulation 2024 (R2024)
-## Student Academic & Continuous Evaluation System (Java JDBC)
+## Stdent Academic & Continuous Evaluation System (Java JDBC)
 
 A comprehensive, database-driven academic continuous assessment and grading engine developed in **Java** utilizing **JDBC** and **MySQL**. It strictly adheres to the official **Kongu Engineering College (Autonomous) - Regulation 2024 (R2024)** academic regulations.
 
@@ -10,19 +10,26 @@ A comprehensive, database-driven academic continuous assessment and grading engi
 ```
 c:\Users\suman\OneDrive\Documents\JDBC\
 │
-├── DBConnection.java          # JDBC Database Connection Manager (root)
-├── StudentDAO.java            # Student, Course & Enrollment CRUD Operations (root)
-├── AcademicDAO.java           # Evaluation Engine & Reports Generator (root)
-├── MainApp.java               # Menu-driven Application & Automated Demo (root)
-├── Student.java               # Student Model Entity
-├── Course.java                # Course Model Entity (Weights & Thresholds)
-├── Enrollment.java            # Course Enrollment & Attendance Tracking
-├── AssessmentMarks.java       # Phased Marks & Grade Assessment Model
+├── src/                           # Java Source Code
+│   ├── DBConnection.java          # JDBC Database Connection Manager
+│   ├── StudentDAO.java            # Student, Course & Enrollment CRUD Operations
+│   ├── AcademicDAO.java           # Evaluation Engine & Reports Generator
+│   ├── MainApp.java               # Menu-driven Application & Automated Demo
+│   ├── Student.java               # Student Model Entity
+│   ├── Course.java                # Course Model Entity (Weights & Thresholds)
+│   ├── Enrollment.java            # Course Enrollment & Attendance Tracking
+│   └── AssessmentMarks.java       # Phased Marks & Grade Assessment Model
 │
-├── kec_schema.sql             # MySQL Database Creation & Seed Data Script
-├── build.bat                  # One-click Windows build script
-├── run.bat                    # One-click interactive app launcher
-├── demo.bat                   # One-click automated demonstration runner
+├── Document/                      # Assignment & Project Documentation
+│   └── sumanths.assignment.docx
+│
+├── Output/                        # Execution & Verification Screenshots
+│
+├── kec_schema.sql                 # MySQL Database Creation & Seed Data Script
+├── build.bat                      # One-click Windows build script
+├── run.bat                        # One-click interactive app launcher
+├── demo.bat                       # One-click automated demonstration runner
+├── start_db.bat                   # Background MariaDB Service starter
 │
 ├── lib/
 │   └── mysql-connector-j-8.3.0.jar  # Official MySQL JDBC Driver
@@ -78,7 +85,7 @@ Double-click or run from PowerShell/CMD:
 ### Option 2: Command Line
 ```powershell
 # 1. Compile all Java source files
-javac -cp ".;lib\mysql-connector-j-8.3.0.jar" *.java
+javac -cp ".;lib\mysql-connector-j-8.3.0.jar" -d . src\*.java
 
 # 2. Run Interactive Menu Application
 java -cp ".;lib\mysql-connector-j-8.3.0.jar" MainApp

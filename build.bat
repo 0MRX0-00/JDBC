@@ -2,7 +2,7 @@
 echo ========================================================
 echo Compiling KEC R2024 Evaluation System (Java JDBC)...
 echo ========================================================
-javac -cp ".;lib\mysql-connector-j-8.3.0.jar" *.java
+javac -cp ".;lib\mysql-connector-j-8.3.0.jar" -d . src\*.java
 if %ERRORLEVEL% EQU 0 (
     echo [SUCCESS] Compilation completed successfully!
 ) else (
